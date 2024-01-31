@@ -8,12 +8,15 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v4
-              
+
             - name: List and Read
               run: |
                 echo "Hi there , how are you"  
                 ls -ltra
                 cat README.md
+            - name: Generate ASCII artwork
+              run: cowsay -f dragon "run for cover, iam Dragon ...Roar" >> dragon.txt
+
 
                   
 
