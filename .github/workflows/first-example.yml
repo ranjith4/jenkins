@@ -8,11 +8,12 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v4
-            - name: welcome massage
-              run: echo "HI There "
-            - name: list files
-              run: ls
-            - name: Read diles
-              run: cat README.md
+              
+            - name: List and Read
+              run: |
+                echo "Hi there , how are you"  
+                ls -ltra
+                cat README.md
 
+                  
 
