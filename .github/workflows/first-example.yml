@@ -1,0 +1,16 @@
+name : my-first-app
+
+on: push
+
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: welcome massage
+              run: echo "HI There "
+            - name: list files
+              run: ls
+            - name: Read diles
+              run: cat README.md
+
+
