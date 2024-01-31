@@ -8,23 +8,26 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v4
+            
+            - name: shell script
+              run: ./cowsay.sh
 
-            - name: List and Read
-              run: |
-                echo "Hi there , how are you"  
-                ls -ltra
-                cat README.md
-            - name: Generate ASCII artwork
-              run: sudo apt-get install cowsay -y
+            # - name: List and Read
+            #   run: |
+            #     echo "Hi there , how are you"  
+            #     ls -ltra
+            #     cat README.md
+            # - name: Generate ASCII artwork
+            #   run: sudo apt-get install cowsay -y
 
-            - name: create dragonfile
-              run: cowsay -f dragon "run for cover, iam Dragon ...Roar" >> dragon.txt
+            # - name: create dragonfile
+            #   run: cowsay -f dragon "run for cover, iam Dragon ...Roar" >> dragon.txt
 
             - name: list files
               run: ls -ltra
             
-            - name: read file
-              run: cat dragon.txt
+            # - name: read file
+            #   run: cat dragon.txt
 
 
                   
