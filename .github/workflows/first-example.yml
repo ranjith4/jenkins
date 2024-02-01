@@ -38,6 +38,7 @@ jobs:
                 cat dragon.txt
                 echo ${{ vars.USERNAME_SAM }}
                 echo ${{ secrets.PASSWORD }}
+                echo ${{ vars.USERNAME_SAM_REPO_VARIABLES }}
 
                   
 
