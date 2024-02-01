@@ -15,7 +15,7 @@ jobs:
         steps:
             - name: shell script
               run: sudo apt-get install cowsay -y
-              
+
             - name: Run command for dragon
               run: cowsay -f dragon "run for cover, iam Dragon ...Roar" >> dragon.txt
 
@@ -34,7 +34,10 @@ jobs:
             with:
                name: Dragonfile
           - name: view file
-            run: cat dragon.txt
+            run: |
+                cat dragon.txt
+                echo ${{ vars.USERNAME_SAM }}
+                echo ${{ secrets.PASSWORD }}
 
                   
 
